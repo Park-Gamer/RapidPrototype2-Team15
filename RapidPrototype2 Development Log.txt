@@ -1,0 +1,9 @@
+# RapidPrototype2 Development Log 
+
+#### 10/05/2024  
+
+**Parker**
+- Added wall running script 
+	- Moves player along wall with assigned layer
+	- Player cannot wallrun when grounded
+	- Scene changes to test mechanic 
