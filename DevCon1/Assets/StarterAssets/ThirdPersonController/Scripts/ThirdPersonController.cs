@@ -180,8 +180,7 @@ namespace StarterAssets
             // set sphere position, with offset
             Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset,
                 transform.position.z);
-            Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers,
-                QueryTriggerInteraction.Ignore);
+            Grounded = Physics.Raycast(transform.position, Vector3.down, GroundLayers); 
 
             // update animator if using character
             if (_hasAnimator)
