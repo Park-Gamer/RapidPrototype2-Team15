@@ -37,9 +37,21 @@ public class PortalLogic : MonoBehaviour
         {
             //The character controller does not like to be teleported around, so turn it off before moving player
             CharacterController cc = other.GetComponent<CharacterController>();
-            cc.enabled = false;
-            pManager.EnterPortal(gameObject, other.gameObject);
-            cc.enabled = true;
+
+            //Check if the character controller is already off for wallrunnning or something
+            if(cc.enabled == false) 
+            {
+                pManager.EnterPortal(gameObject, other.gameObject);
+            }
+            else
+            {
+                //If character controller is on, turn it off for teleporting then back on
+                cc.enabled = false;
+				pManager.EnterPortal(gameObject, other.gameObject);
+                cc.enabled = true;
+			}
+ 
+            
         }
     }
 
