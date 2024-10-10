@@ -5,5 +5,14 @@
 **Parker**
 - Added wall running script 
 	- Moves player along wall with assigned layer
-	- Player cannot wallrun when grounded
+	- Player cannot wall run when grounded
 	- Scene changes to test mechanic 
+
+#### 10/10/2024  
+
+**Parker**
+- Added wall running animations
+	- Animation plays depending on if player is facing left or right
+
+- Added tutorial text to level
+	- Added text to level that displays how to move and shoot, also how to use wall run mechanic
