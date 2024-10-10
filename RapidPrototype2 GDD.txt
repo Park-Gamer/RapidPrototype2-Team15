@@ -1,0 +1,31 @@
+# Rapid Prototype 2 GDD | Wallrunning 
+Made by: **Chris Short, Parker Hamilton, Ethan Koocher**
+
+# Game Mechanic | Wall running   
+3D puzzle platformer with wall running, sprint toward a horizontal surface and glide along it, seamlessly navigating the environment. Strategically place portals to keep your momentum going. This blend of wall running and portal mechanics creates a thrilling gameplay experience that challenges player skills and problem solving.
+
+# Objective Statement
+ Create a fluid and engaging movement system that not only makes traversal exciting but also integrates seamlessly with the game’s puzzle elements, encouraging players to master both wall running and portal mechanics.
+ 
+ **Key Question:** In what ways does this mechanic synchronize with the already established portal mechanic we developed?
+
+**Why?:** Both mechanics encourage players to think critically about their environment. Players can wall run into portals, emphasizing spatial awareness and problem-solving as they navigate obstacles. The question highlights how wall running not only complements but also enriches the established portal mechanics, leading to a more cohesive and engaging gameplay experience.
+
+# Design Rationale  
+
+We envision a 3D game where wall running and portals create a fluid movement system that redefines traversal. Players can seamlessly transition between running along walls and leaping into portals, allowing for creative navigation of complex environments. This mechanic is innovative as it works well with portal teleportation, enabling players to explore and solve puzzles in ways not typically seen in games.
+
+# Resources
+[3rd person Controller](https://assetstore.unity.com/packages/essentials/starter-assets-thirdperson-updates-in-new-charactercontroller-pa-196526)
+
+[Magic Effects FREE by Hovl Studio](https://assetstore.unity.com/packages/vfx/particles/spells/magic-effects-free-247933)
+
+[Destroyed Building Kit - Demo by Loknar Studio](https://assetstore.unity.com/packages/3d/environments/destroyed-building-kit-demo-174899)
+
+[Flooded Grounds by Sandro T](https://assetstore.unity.com/packages/3d/environments/flooded-grounds-48529)
+
+[Mixamo](https://www.mixamo.com/#/)
+
+[Freesound](https://freesound.org/people/User391915396/sounds/683828/)
+
+[Moving To Raycast Hit Point](https://discussions.unity.com/t/moving-to-raycast-hit-point/847122)
