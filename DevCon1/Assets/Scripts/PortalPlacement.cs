@@ -23,8 +23,9 @@ public class PortalPlacement : MonoBehaviour
 
     public bool canPlace; // Bool check for collisions
 
+    [SerializeField] LayerMask portalLayer;
 
-	void OnTriggerExit(Collider other) // When not colliding
+    void OnTriggerExit(Collider other) // When not colliding
     {
         Debug.Log("Able to place portal");
         canPlace = true; 
@@ -55,7 +56,7 @@ public class PortalPlacement : MonoBehaviour
 
         RaycastHit _HitInfo;
 
-		if (Physics.Raycast(_startPos, _startDir, out _HitInfo, 100.0f))
+		if (Physics.Raycast(_startPos, _startDir, out _HitInfo, 100.0f, portalLayer))
         {
             Vector3 offset = _startPos - _HitInfo.point;
             offset.Normalize();
