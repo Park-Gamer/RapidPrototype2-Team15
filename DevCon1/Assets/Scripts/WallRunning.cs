@@ -1,5 +1,6 @@
 using StarterAssets;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class WallRunning : MonoBehaviour
 {
@@ -22,12 +23,17 @@ public class WallRunning : MonoBehaviour
     [SerializeField] Transform playerDirection; // Transform to determine what direction player is facing
     CharacterController controller; // Character controller to add force while the player wall runs
     ThirdPersonController playerMovement; // Player movement script to disable while the player wall runs
+    // Animations
+    private Animator animator;
+    public string rWall = "WallRunR";
+    public string lWall = "WallRunL";
 
     void Start()
     {
-        // Gather player script/controller
+        // Gather player script/controller/animator
         controller = GetComponent<CharacterController>();
         playerMovement = GetComponent<ThirdPersonController>();
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -57,6 +63,30 @@ public class WallRunning : MonoBehaviour
             if (playerMovement.enabled) // Exception check
             {
                 StartWallRun();
+                if (wallRight)
+                {
+                    if (animator != null)
+                    {
+                        animator.SetBool(rWall, true);
+                        animator.SetBool(lWall, false);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("Animator not found!");
+                    }
+                }
+                else if (wallLeft)
+                {
+                    if (animator != null)
+                    {
+                        animator.SetBool(rWall, false);
+                        animator.SetBool(lWall, true);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("Animator not found!");
+                    }
+                }
             }
         }
         else // When player isn't detecting wall or stops holding forward
@@ -64,6 +94,16 @@ public class WallRunning : MonoBehaviour
             if (!playerMovement.enabled)
             {
                 StopWallRun();
+
+                if (animator != null)
+                {
+                    animator.SetBool(rWall, false);
+                    animator.SetBool(lWall, false);
+                }
+                else
+                {
+                    Debug.LogWarning("Animator not found!");
+                }
             }
         }
     }
