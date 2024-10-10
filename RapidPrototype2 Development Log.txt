@@ -16,3 +16,11 @@
 
 - Added tutorial text to level
 	- Added text to level that displays how to move and shoot, also how to use wall run mechanic
+
+#### 10/10/2024
+
+**Chris**
+- Replaced Third Person player with a new prefab called character.
+	- Contains all the same stuff but with a rigidbody instead of CharacterController
+- Changed Wallrunning script to use rigidbody instead of CharacterController
+	- Use new PlayerController script to handle isGrounded instead of a new raycast

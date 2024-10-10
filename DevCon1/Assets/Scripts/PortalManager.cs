@@ -105,11 +105,31 @@ public class PortalManager : MonoBehaviour
             {
                 Debug.Log("Entered First Portal");
                 other.transform.position = portalQueue.Last().transform.position + Vector3.down * 0.5f;
+
+                if (other.TryGetComponent(out CharacterController cc))
+                {
+                    
+                    Vector3 newDirection = portalQueue.Last().transform.forward;
+                    Debug.Log(newDirection);
+                    float curSpeed = cc.velocity.magnitude;
+                    cc.enabled = true;
+                    cc.Move(curSpeed * newDirection);
+                }
+                
             }
             else if (portalQueue.Last().transform.position == portal.transform.position)
             {
                 Debug.Log("Entered Last portal");
                 other.transform.position = portalQueue.First().transform.position + Vector3.down * 0.5f;
+
+                if (other.TryGetComponent(out CharacterController cc))
+                {
+                    Vector3 newDirection = portalQueue.First().transform.forward;
+                    Debug.Log(newDirection);
+                    float curSpeed = cc.velocity.magnitude;
+                    cc.enabled = true;
+                    cc.Move(curSpeed * newDirection);
+                }
             }
             else
             {
