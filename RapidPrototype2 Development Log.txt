@@ -22,3 +22,12 @@
 **Chris**
 - Added velocity when going through a portal.
 	- Direction does not change relative to the portal due to the character controller.
+
+#### 10/11/2024
+
+**Ethan**
+- Added final level design
+	- Tutorial level
+	- Script for staircase
+	
+	
