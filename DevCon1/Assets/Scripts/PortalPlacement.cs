@@ -56,7 +56,7 @@ public class PortalPlacement : MonoBehaviour
 
         RaycastHit _HitInfo;
 
-		if (Physics.Raycast(_startPos, _startDir, out _HitInfo, 100.0f, portalLayer))
+        if (Physics.Raycast(_startPos, _startDir, out _HitInfo, 20.0f, portalLayer))
         {
             Vector3 offset = _startPos - _HitInfo.point;
             offset.Normalize();
@@ -64,16 +64,7 @@ public class PortalPlacement : MonoBehaviour
 
             Quaternion rot = Quaternion.FromToRotation(-Vector3.forward, _HitInfo.normal);
             Vector3 loc = _HitInfo.point - offset;
-			pManager.SpawnPortal(loc, rot);
+            pManager.SpawnPortal(loc, rot);
         }
-
-        //[Obsolete with portalManager class
-
-        //if (portalPrefab != null) // Exception Check
-        //{
-        //    // Instantiate the portal
-           
-        //    //GameObject portal = Instantiate(portalPrefab, placementPoint.position, placementPoint.rotation);
-        //}
     }
 }
